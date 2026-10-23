@@ -1,0 +1,218 @@
+/* Reseteo básico de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* Contenedor principal */
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER (FILA 1) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a252f;
+}
+
+header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #27ae60;
+}
+
+/* SECCIÓN HERO (FILA 2) */
+.fila-2 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.hero {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #1a252f;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: #27ae60;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-hero:hover {
+  background-color: #219150;
+}
+
+.hero-img {
+  flex: 1;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* SECCIÓN NOSOTROS (FILA 3) */
+.seccion-nosotros {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.seccion-nosotros h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1a252f;
+}
+
+.seccion-nosotros p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* SECCIÓN CATÁLOGO (FILA 4) */
+.fila-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.producto {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.producto .emoji img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.producto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #1a252f;
+}
+
+.producto p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.producto .precio {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.producto button {
+  background-color: #1a252f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.producto button:hover {
+  background-color: #27ae60;
+}
+
+/* FOOTER (FILA 5) */
+footer {
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 20px;
+  border-top: 2px solid #e0e0e0;
+  color: #777;
+  font-size: 0.95rem;
+}
+
+/* Diseño Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header nav a {
+    margin: 0 10px;
+  }
+
+  .fila-2 {
+    flex-direction: column;
+    text-align: center;
+  }
+}
